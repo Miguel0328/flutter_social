@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_social/widgets/scaffold.dart';
+import 'package:flutter_social/widgets/safe_area.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MyScaffold(),
+      home: MySafeArea(),
     );
   }
 }
