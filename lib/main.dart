@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_social/widgets/single_child_scroll_view.dart';
+import 'package:flutter_social/widgets/list_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MySingleChildScrollView(),
+    return const MaterialApp(
+      home: MyListView(),
     );
   }
 }
