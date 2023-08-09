@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_social/widgets/list_view_builder.dart';
 
 class MyListView extends StatelessWidget {
   const MyListView({super.key});
@@ -7,8 +8,17 @@ class MyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
+            IconButton(
+              onPressed: () {
+                final route = MaterialPageRoute(builder: (_) {
+                  return const MyListViewBuilder();
+                });
+                Navigator.push(context, route);
+              },
+              icon: const Icon(Icons.login),
+            ),
             SizedBox(
               height: 100,
               child: ListView(
@@ -25,31 +35,24 @@ class MyListView extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
-              child: ListView(
-                keyboardDismissBehavior:
-                    ScrollViewKeyboardDismissBehavior.onDrag,
-                children: [
-                  const TextField(),
-                  const Text("Hi"),
-                  Container(
-                    height: 100,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    height: 600,
-                    color: Colors.red,
-                  ),
-                  Container(
-                    height: 600,
-                    color: Colors.green,
-                  ),
-                  Container(
-                    height: 600,
-                    color: Colors.yellow,
-                  ),
-                ],
+            ListView(
+              shrinkWrap: true,
+              children: List.generate(
+                5,
+                (index) => Container(
+                  margin: const EdgeInsets.all(5),
+                  color: Colors.blue,
+                  height: 50,
+                ),
               ),
+            ),
+            Container(
+              color: Colors.red,
+              height: 150,
+            ),
+            Container(
+              color: Colors.green,
+              height: 450,
             ),
           ],
         ),
