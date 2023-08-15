@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_social/icons/custom_icons_icons.dart';
+import 'package:flutter_social/icons/custom_icons.dart';
 
 class CustomIcon extends StatelessWidget {
   const CustomIcon({super.key});
