@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class MyImages extends StatelessWidget {
@@ -25,7 +26,15 @@ class MyImages extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               },
-            )
+            ),
+            CachedNetworkImage(
+              imageUrl:
+                  "https://blog.back4app.com/wp-content/uploads/2020/09/flutter-backend.png",
+              placeholder: (context, url) => const Center(
+                child: CircularProgressIndicator(),
+              ),
+              errorWidget: (context, url, error) => const Icon(Icons.error),
+            ),
           ],
         ),
       ),
