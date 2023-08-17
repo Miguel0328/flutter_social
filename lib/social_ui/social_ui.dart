@@ -39,6 +39,7 @@ class SocialUI extends StatelessWidget {
           CircleButtom(
             color: Color(0xff7BBAFF),
             iconData: CustomIcons.userFriends,
+            showBadge: true,
           ),
           SizedBox(width: 10),
           CircleButtom(
