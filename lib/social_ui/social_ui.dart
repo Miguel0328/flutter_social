@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_social/icons/custom_icons.dart';
+import 'package:flutter_social/social_ui/widgets/avatar.dart';
 import 'package:flutter_social/social_ui/widgets/circle_button.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -47,6 +48,14 @@ class SocialUI extends StatelessWidget {
             iconData: CustomIcons.messenger,
           ),
           SizedBox(width: 10),
+        ],
+      ),
+      body: ListView(
+        children: const [
+          Avatar(
+            size: 100,
+            asset: "assets/users/1.jpg",
+          ),
         ],
       ),
     );
