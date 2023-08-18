@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_social/icons/custom_icons.dart';
 import 'package:flutter_social/social_ui/widgets/avatar.dart';
 import 'package:flutter_social/social_ui/widgets/circle_button.dart';
+import 'package:flutter_social/social_ui/widgets/what_is_on_your_mind.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocialUI extends StatelessWidget {
@@ -18,13 +19,17 @@ class SocialUI extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leadingWidth: 150,
-        leading: SvgPicture.asset(
-          "assets/logos/facebook.svg",
-          colorFilter: const ColorFilter.mode(
-            Colors.blueAccent,
-            BlendMode.srcIn,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 15.0),
+          child: SvgPicture.asset(
+            "assets/logos/facebook.svg",
+            colorFilter: const ColorFilter.mode(
+              Colors.blueAccent,
+              BlendMode.srcIn,
+            ),
+            width: 150,
+            alignment: Alignment.centerLeft,
           ),
-          width: 150,
         ),
         actions: const [
           CircleButtom(
@@ -51,11 +56,13 @@ class SocialUI extends StatelessWidget {
         ],
       ),
       body: ListView(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 15,
+        ).copyWith(
+          top: 10,
+        ),
         children: const [
-          Avatar(
-            size: 100,
-            asset: "assets/users/1.jpg",
-          ),
+          WhatIsOnYourMind(),
         ],
       ),
     );
