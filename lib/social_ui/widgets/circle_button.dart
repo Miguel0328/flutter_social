@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CircleButtom extends StatelessWidget {
+class CircleButton extends StatelessWidget {
   final Color color;
   final IconData iconData;
   final bool showBadge;
 
-  const CircleButtom({
+  const CircleButton({
     super.key,
     required this.color,
     required this.iconData,
